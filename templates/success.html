@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %}Registration Success - osu! Server{% endblock %}
+{% block subtitle %}Account Created Successfully!{% endblock %}
+
+{% block content %}
+<div>
+    <div>
+        <h2> welcome to osssss{{ session.username }}!</h2>
+    </div>
+    
+    <div>
+        <h3>Info:</h3>
+        <p><strong>Username:</strong> {{ session.username }}</p>
+    </div>
+    
+    <div>
+        <a href="{{ url_for('logout') }}" class="btn">
+            Logout
+        </a>
+    </div>
+</div>
+{% endblock %}

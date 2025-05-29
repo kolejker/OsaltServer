@@ -1,0 +1,20 @@
+<!-- users.html -->
+{% extends "base.html" %}
+
+{% block content %}
+<div>
+    <h2>Registered Users ({{ users|length }})</h2>
+    
+    {% if users %}
+        <div class="user-list">
+            {% for user in users %}
+                <div class="user-item">
+                    <strong>{{ user[1] }}</strong> 
+                </div>
+            {% endfor %}
+        </div>
+    {% else %}
+        <p>No users registered yet.</p>
+    {% endif %}
+</div>
+{% endblock %}
